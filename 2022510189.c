@@ -43,7 +43,7 @@ typedef struct MinHeapNode {
 
 int total_record = 0;
 long long split_count = 0;
-long long node_allocations = 0;
+long long node_allocations = 0;//For calculating memory usage
 long long uni_node_allocations = 0;
 
 void search_department_by_rank(const char* dept_name, int rank);
@@ -97,7 +97,7 @@ int main() {
     int height = calculate_tree_height();
     double memory_usage = calculate_memory_usage();
     double time_taken = calculate_average_seek_time("yok_atlas.csv");
-    printf("Total records: %d\n",total_record);
+    //printf("Total records: %d\n",total_record);
     
     choice = 0;
     while(choice != 3) {
